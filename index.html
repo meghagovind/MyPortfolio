@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- hello -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="./style.css" >
+    <script src="https://kit.fontawesome.com/80ce1974e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="./images/meghana.png" class="logo" />
+            <ul>
+                <li><a href=#home>Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Frontend-Developer</p>
+            <h1>Hi, I'm <span>Meghana </span>From India</h1>
+        </div>
+    </div>
+    
+</div>
+
+<!-- ----------------------about--------------------- -->
+<div id="about">
+    <div class="container">
+        <div class="about-row">
+            <div class="about-col1">
+                <img src="./images/profile-photo.jpg"> 
+            </div>
+            <div class="about-col2">
+                <h1 class="sub-title">About Me</h1>
+                <p>If you're looking for random paragraphs, you've come to the right place. 
+                    When a random word or a random sentence isn't quite enough, the next logical step is to find a random paragraph.
+                     We created the Random Paragraph Generator with you in mind. The process is quite simple. Choose the number of random paragraphs you'd like to see and click the button. </p>
+                     <div class="tab-titles">
+                        <div class="tab-links active-links" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('Experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('Education')">Education</div>
+                     </div>
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web-Development</span></br>Developing an responsive website UI </li>
+                            <li><span>UI/UX</span></br>Designing web app development</li>
+                            <li>Python </li>
+                            <li><span>C++</span></br>Problem-Solving</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023 - current</span></br>Web - Development</li>
+                            <li><span>2023[Intern]</span></br>Front-End developer at Reliance Jio</li>
+                            
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023-2025</span></br>Masters in Information Systems</li>
+                            <li><span>2019-2023</span></br>Bachlores in Information Technology</li>
+                            <li><span>2017-2019</span></br>Intermediate</li>
+                        </ul>
+                     </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------projects---------------- -->
+
+<div id = projects>
+    <div class="container"> 
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Toxic Comment Classification on Social Networking Sites Based on Machine Learning</h2>
+                <p>project utilizing machine learning techniques to classify toxic comments on social networking sites, enhancing online community moderation. 
+                Implemented models to identify and filter harmful content, contributing to a safer and more inclusive online environment.Conducted extensive research on data cleaning techniques, and a comments classifier using Random Forest ML on
+                Kaggle and manual user Dataset.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>Creating CI/CD Pipe-line using Jenkins</h2>
+                <p>Developed CI/CD pipelines using Jenkins to automate software delivery processes, enabling continuous integration and deployment.
+                Implemented robust testing and deployment strategies to streamline development workflows and ensure code quality. Contributed to improved efficiency and reliability of software releases through automation and version control integration.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-html5"></i>
+                <h2>The Odin Project | Self-Directed Study Web Development Curriculum</h2>
+                <p>Actively acquiring a thorough understanding of HTML, CSS, and JavaScript through hands-on learning and project-based curriculum.Completed multiple web development projects demonstrating proficiency and competence in the aforementioned
+                programming languages.Initiated and maintained a technical book club through Discord, fostering a collaborative learning environment and leading discussions on core concepts and principles to enhance programming skills.  </p>
+                
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------------portfolio----------------- -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="./images/w1.jpg" alt="work-1">
+            </div>
+            <div class="work">
+                <img src="./images/w2.jpg" alt="work-2">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-links");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body>
+</html>
